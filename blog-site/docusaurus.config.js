@@ -12,7 +12,7 @@ const config = {
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.png",
+  favicon: "img/favicon.ico",
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -45,9 +45,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      footer: {
-        style: "dark",
-        copyright: `Copyright © ${new Date().getFullYear()} Ovisly.`,
+      navbar: {
+        title: "Ovisly Home",
+        logo: {
+          alt: "Ovisly Logo",
+          src: "img/logo-transparent.png",
+          srcDark: "img/logo-inverted-transparent.png",
+          href: "https://ovisly.com/",
+        },
       },
       prism: {
         theme: lightCodeTheme,
