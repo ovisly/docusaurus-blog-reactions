@@ -1,5 +1,7 @@
 import React from "react";
 import clsx from "clsx";
+import BrowserOnly from "@docusaurus/BrowserOnly";
+
 import { useBlogPost } from "@docusaurus/theme-common/internal";
 import EditThisPage from "@theme/EditThisPage";
 import TagsListInline from "@theme/TagsListInline";
@@ -7,6 +9,7 @@ import ReadMoreLink from "@theme/BlogPostItem/Footer/ReadMoreLink";
 import styles from "./styles.module.css";
 
 import BlogEndBar from "@site/customizations/BlogEndBar";
+import BlogReactions from "@site/customizations/BlogReactions";
 
 export default function BlogPostItemFooter() {
   const { metadata, isBlogPostPage } = useBlogPost();
@@ -15,6 +18,13 @@ export default function BlogPostItemFooter() {
   const truncatedPost = !isBlogPostPage && hasTruncateMarker;
   const tagsExists = tags.length > 0;
   const renderFooter = tagsExists || truncatedPost || editUrl;
+
+  // Get reactions from blog metadata.
+  const reactions = Object.keys(metadata.frontMatter).includes("reactions")
+    ? metadata.frontMatter.reactions
+    : [];
+  const slug = metadata.frontMatter.slug;
+
   if (!renderFooter) {
     return null;
   }
@@ -31,6 +41,14 @@ export default function BlogPostItemFooter() {
             <TagsListInline tags={tags} />
           </div>
         )}
+
+        <BrowserOnly>
+          {() => (
+            <div className={clsx("col", { "col--9": truncatedPost })}>
+              <BlogReactions reactions={reactions} slug={slug} />
+            </div>
+          )}
+        </BrowserOnly>
 
         {isBlogPostPage && editUrl && (
           <div className="col margin-top--sm">

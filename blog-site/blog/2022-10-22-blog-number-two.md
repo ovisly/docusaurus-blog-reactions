@@ -5,7 +5,12 @@ authors:
   - heromode-dev
 tags: [blog, number, two]
 reactions:
-  🎤: announcement
+  📝: blog!
+  "#️⃣": number!
+  2️⃣: two!
+  💐: buy my own flowers
+  🚪: bye bye door
+  🏖: fresh as a beach
 ---
 
 Mrs. Dalloway said she would buy the flowers herself.

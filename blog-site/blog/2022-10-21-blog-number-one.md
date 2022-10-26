@@ -5,7 +5,12 @@ authors:
   - heromode-dev
 tags: [blog, number, one]
 reactions:
-  🎤: announcement
+  📝: blog!
+  "#️⃣": number!
+  1️⃣: one!
+  🛌: waking up
+  🪳: not the transformer i was asking for
+  🦋: why can't i turn into this?
 ---
 
 Upon waking up after a troublesome dream one morning, Gregor Zamza realized that
