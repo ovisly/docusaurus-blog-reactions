@@ -4,6 +4,8 @@ title: Blog Number Two
 authors:
   - heromode-dev
 tags: [blog, number, two]
+reactions:
+  🎤: announcement
 ---
 
 Mrs. Dalloway said she would buy the flowers herself.

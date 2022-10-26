@@ -4,6 +4,8 @@ title: Blog Number One
 authors:
   - heromode-dev
 tags: [blog, number, one]
+reactions:
+  🎤: announcement
 ---
 
 Upon waking up after a troublesome dream one morning, Gregor Zamza realized that
