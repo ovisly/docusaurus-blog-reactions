@@ -55,7 +55,6 @@ const config = {
       },
     }),
 
-  /*
   plugins: [
     [
       "docusaurus2-dotenv",
@@ -64,7 +63,6 @@ const config = {
       },
     ],
   ],
-  */
 };
 
 module.exports = config;
